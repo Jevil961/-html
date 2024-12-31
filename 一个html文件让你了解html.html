@@ -1,0 +1,478 @@
+<!--此教程只是基础教程，至于网页模板等等，会通过CSS解决，不懂或者像玩出花样，在看完基础文章后完全可以通关百度，bing等搜索引擎来达到学习更深层的效果，也不会因为不会编写而感到烦恼。
+html目前虽然不是主流，但是仍有工具类似html开发，配合CSS仍然是部分网站常用的。本教程只是为了服务大众，如果还有不好请见谅，我们i编程论坛 很希望你能够自主学会编程，也很希望在这个文档里做出改进，让更多新手学会！
+注：如果本教程的专业名词你听不懂，请百度或者看视频来了解，你是学编程语言的，所以你必须要对电脑和一些专业名词熟悉，如果连这个都不明白，还不去看教程以及说明，那么我建议你转专业来谋求发展！
+
+<!DOCTYPE html> 是一种声明，你可以理解为C语言以及C++或者C#的函数头
+类似于#include<XXXX>或者#include"stdio.h"
+
+<html lang="zh-CN"> 是文字表达，zh-CN即中国语言，en是英文表达
+
+<meta charset="UTF-8"> 是文字格式 UTF-8 格式的文字输出
+<head>是头函数，这没啥可讲的，反正得有就完事了（同时你在搜索引擎看到的简介以及标题都和他有关系）
+<body>就是main主函数了，你在main主函数可以写任何东西，这里头没用变量这一词
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+
+	<title>这是网页标题</title>
+</head>
+<body>
+<!--内容标题-->
+<h1>这是我第一次写的html</h1>
+<h2>这是我第一次写的html</h2>
+<h3>这是我第一次写的html</h3>
+<h4>这是我第一次写的html</h4>
+<!--内容标题-->
+<a id="feileishen">顶部</a>
+<p>这是我写的第一个内容</p><!--是段落，空白很大，跟一段话然后一个空格，在下个空格继续内容-->
+<p>也是我在html写的第一个内容</p>
+
+这是我写的第一个内容<br/><!--换行符-->
+也是我在html写的第一个内容<br/>
+eg.这是我写的第一个程序<br/>也是我在html写的第一个内容<br/>
+<p></p>
+<!--水平线，就是绘制一条无限长的线-->
+<hr><!--或者--><hr/>
+
+<!--字体样式-->
+<strong>粗体</strong>
+<em>斜体</em>
+
+<p></p>
+
+<!--特殊符号-->
+空格：&nbsp;
+例：今天是个&nbsp;&nbsp;&nbsp&nbsp好日子
+<br/>
+空了四个格子
+<p>
+大于号>	&gt;	&gt
+<br/>
+小于号<	&lt;	&lt
+</p>
+版权符号&copy;<br/>
+例子：&copy Jevil公司</p>
+
+<!--图片格式以及输出-->
+<img src="path"alt="text"title="text" width="x" height="y">
+<!--
+src是图像地址  有两种写法，一种就是知道具体路径例如：C:\Windows\Globalization\Sorting\1.jpg
+还有一种是	../	这个代表的以上是你html文件的目录，比如说：你的html在C:\Windows\Globalization\11\，如果你输入../ 那么html就会自动认为你的目录在这里，简单理解就是：取html本地文件夹路径
+还有一种就是网络图片 比如：https://www.ibchzy.top/template/wekei_free_10/images/ibiancheng.png		这是可以在html正常加载的。
+
+alt是图像的替换文字，什么意思？就是说你在服务器里设置的图像，当别人下载的图像，会下载名称为XXX.jpg， 当你图像目录输入错误的时候会显示出该名称
+
+alt是鼠标停在照片位置的时候提出文字，也就是说当你鼠标的指针在图片范围内，你的鼠标箭头的附近会说明内容
+
+//高度和宽度建议在学CSS时候使用，不是不能用，只是不推荐 
+width是图像宽度
+
+height是图像高度
+
+其中src和alt必须填写，不先写高度和宽度是按图像默认大小
+
+支持目前主流图片比如JPG,GIF,PNG,BMP等等
+
+注：运行本网页建议自己挂个JPG来修改此html源码
+-->
+
+<!--链接标签-->
+<!--问：什么叫链接标签呢？
+答：链接就是word，ppt等说的超链接，链接可以是web地址（域名，网站地址）也可以是打开XXX文件的命令-->
+<a href="path"target="目标窗口位置">链接图像或者文本</a>
+<!--
+href是链接路径（比如网站地址，系统指令）《必须填写》
+target是指链接在哪个窗口打开（常常使用_self 以及 _blank）
+
+_blank 是 在一个新的标签页打开（不懂请自己看什么叫标签页）
+_self 是在自己的标签页打开，就是进入了新网页，可以退回到原来的网页 
+-->
+例子：
+<a href="https://www.ibchzy.top" target="_blank">点我跳转到i编程论坛</a>
+<a href="https://www.ibchzy.top"
+<img src="path"alt="text"title="text" width="x" height="y">
+</a>
+<!--（通过这个发方法直接内嵌一个图片，如果想要使用_blank等语句，直接在后面加入即可）-->
+
+<!--锚链接
+1.需要一个标记（即锚标记）
+2.需要对这个标记做什么（跳转到标记）
+你可以理解为飞雷神，但是需要印记 即 #
+-->
+例子：
+<a href="#feileishen">回到顶部</a>  <!--标记请见第15行-->
+<!--也可以跳转到XX网站的顶部或者尾部-->
+<a href="https://www.ibchzy.top#down"target="点我跳转到i编程论坛"</a>
+<!--注意：我都网站并没有标记#down 所以你跳转到我的网站是没效果的，不过你可以自己写个html利用打开超链接然后对接锚链接原理（核心前提：必须以及标记，不然飞雷神传送不过去）-->
+
+
+<!--功能性链接 
+顾名思义这玩意就是跳转链接了
+例：写个跳转新标签并且打开QQ加群
+-->
+<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=NwCzr_qKTljufCZX5pHungaWKYAV6ULP&jump_from=webapi&authKey=RQS1bwG1G19NKdQlplbOVamTgLlmSjuym3Q54BmWSJOwpCGF8usBhh0rkoGV7gNa">
+  <!--上面很明显 跳转新页面 然后打开加入群链接-->
+<img border="0" src="https://pub.idqqimg.com/wpa/images/group.png" alt="爱编程和资源聊天群" title="爱编程和资源聊天群"></a>
+ <!--这个通过pub.idqqimg.com/wpa/images/group.png获取图片，并在图片中说明我的群聊-->
+
+ <!--再说个关于邮箱的功能性链接吧-->
+<a href="mailto:2878528937@qq.com">点击联系我的邮箱</a>
+<!--
+是的，直接在href=""的双引号里加个mailto（电子邮件到）mail to
+使用之后自动打开电脑邮箱来给我发表邮箱-->
+<a href="file:///C:\Windows\PLA">打开我的文件夹目录</a>
+
+
+ <!--块元素-->
+ <!--块元素是指无论内容多少，该元素独占一行
+例如：<p></p>	<h1>······<h6>等等
+-->
+
+ <!--行内元素-->
+ <!--块元素是内容撑开宽度，左右都是行内元素的可以在排在一行
+例如：<a></a>	<strong></strong>	<em></em> 等等
+-->
+
+
+<!--列表标签-->
+<p></p>
+什么是列表标签？<br/>
+答：就是类似于表格<br/>
+1.xxxxxxxxxxx<br/>
+2.xxxxxxxxxxx<br/>
+3.xxxxxxxxxxx<br/>
+4.xxxxxxxxxxx<br/>
+<p></p>
+分为三种列表：<br/>
+1.无序列表<br/>
+2.有序列表<br/>
+3.定义列表<br/>
+<p></p>
+<!--有序列表
+ol：有序标签
+li：标签内容
+-->
+例：分为三种列表：
+<ol>
+	<li>无序列表</li>
+	<li>有序列表</li>
+	<li>定义列表</li>
+</ol>
+<p></p>
+
+<!--无序列表
+ul：无序标签
+li：标签内容-->
+例：分为三种列表：
+<ul>
+	<li>无序列表</li>
+	<li>有序列表</li>
+	<li>定义列表</li>
+</ul>
+
+<!--自定义列表
+dl：标签
+dt：列表名称（标题）
+dd：列表内容
+-->
+例：
+<dl>
+	<dt>分为这三种列表</dt>
+	<dd>无序列表</dd>
+	<dd>有序列表</dd>
+	<dd>定义列表</dd>
+</dl>
+
+
+
+<!--表格（table）
+行	tr
+列	td
+-->
+例：3行4列
+<table>
+	<tr>
+	<td>1-1&nbsp;&nbsp;</td>
+	<td>1-2&nbsp;&nbsp;</td>
+	<td>1-3&nbsp;&nbsp;</td>
+	<td>1-4&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	<td>2-1&nbsp;&nbsp;</td>
+	<td>2-2&nbsp;&nbsp;</td>
+	<td>2-3&nbsp;&nbsp;</td>
+	<td>2-4&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	<td>3-1&nbsp;&nbsp;</td>
+	<td>3-2&nbsp;&nbsp;</td>
+	<td>3-3&nbsp;&nbsp;</td>
+	<td>3-4&nbsp;&nbsp;</td>
+	</tr>
+</table>
+
+
+例：3行4列+绘制表格
+<table border="1px">
+	<tr>
+	<td>1-1&nbsp;&nbsp;</td>
+	<td>1-2&nbsp;&nbsp;</td>
+	<td>1-3&nbsp;&nbsp;</td>
+	<td>1-4&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	<td>2-1&nbsp;&nbsp;</td>
+	<td>2-2&nbsp;&nbsp;</td>
+	<td>2-3&nbsp;&nbsp;</td>
+	<td>2-4&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	<td>3-1&nbsp;&nbsp;</td>
+	<td>3-2&nbsp;&nbsp;</td>
+	<td>3-3&nbsp;&nbsp;</td>
+	<td>3-4&nbsp;&nbsp;</td>
+	</tr>
+</table>
+
+
+例：跨列+跨行+绘制表格
+<table border="1px">
+	<tr>
+	<!--colspan的意思是我要跨几列，比如我跨四列-->
+	<td colspan="4">在你面前的是二行四列</td>
+	</tr>
+	<tr>
+	<!--跨行-->
+	<td rowspan="2">在你面前<br/>是跨两行&nbsp;&nbsp;</td>
+	<td>2-2&nbsp;&nbsp;</td>
+	<td>2-3&nbsp;&nbsp;</td>
+	<td>2-4&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	<td>3-2&nbsp;&nbsp;</td>
+	<td>3-3&nbsp;&nbsp;</td>
+	<td>3-4&nbsp;&nbsp;</td>
+	</tr>
+</table>
+
+
+接下来可是重量级！！！！<br/>
+
+ <!--视频和音频-->
+<!--视频:video-->
+<video src="../xxxx/xxx.mp4" controls autoplay></video>
+<p>
+ <!--src :资源路径（可以使用在线资源例如：www.xxxxx.com/xxxx.mp4）
+controls: 控制视频的组件（进度条，暂停播放按钮，音量条）
+autoplay: 自动播放视频
+src 必须有，其他的建议加上用来播放视频！-->
+
+
+<!--音频:audio-->
+<audio src="../xxxx/xxx.mp4" controls autoplay></audio>
+ <!--src :资源路径（可以使用在线资源例如：www.xxxxx.com/xxxx.mp3）
+controls: 控制音乐的组件（进度条，暂停播放按钮，音量条）
+autoplay: 自动播放音乐
+src 必须有，其他的建议加上用来播放音乐！-->
+
+
+那么就要开始页面结构分析了（不是css）
+header 	标题头部区域的内容（用于页面或页面中的一块区域）
+footer		标记脚部区域的内容（用于整个页面或页面的一块区域）
+section	web页面中一块独立区域
+article		独享的文章内容
+aside		相关内容或应用（常用于侧边栏）
+nav	 	导航类辅助
+
+例：
+<header><h2>我来组成头部</h2></header>
+ <section>我来组成身体</section>
+<footer><h3>我来组成脚部</h3></footer>
+
+
+<!--嵌入代码(iframe)
+src：XX文件的目录地址，或者在线地址，可以是任何地址（例：www.baidu.com）
+scrolling="yes"：它指定了是否应该在iframe中显示滚动条。在这个例子中，设置为yes意味着如果内容超出了iframe的大小，滚动条将会出现。
+border="0"：它指定了iframe的边框大小。设置为0意味着没有边框。
+frameborder="no"：它指定了是否显示边框。no意味着不显示边框。
+framespacing="0"：它指定了iframe中的框架之间的间距。设置为0意味着没有间距。
+allowfullscreen="true"：它指定了用户是否可以将iframe中的内容切换到全屏模式。true表示允许全屏。
+name：框架名称
+width 是框架宽度
+height 是框架高度
+-->
+<iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=647127010&bvid=BV1Se4y147Mk&cid=877318042&p=1" name="ivroy tower吉他 By Bilibili"
+scrolling="yes" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="1080px" height="800px"></iframe>
+
+
+<!--通过嵌入代码实现在html内嵌一键跳转小网页-->
+<iframe src="" name="ibiancheng" width="1080px" height="800px"></iframe>
+<a href="https://www.ibchzy.top" target="ibiancheng">" 点我跳转"</a>
+<p>
+
+
+
+重点中的重点！！！！！！！！
+<!--post和get提交数据-->
+<!--表单form
+action: 可以是表单提交位置，也可以是网站或者一个请求处理地址
+method: post , get 提交方式
+-->
+<form action="XXXX.html" method="get">
+<!--文本输入框：input type="text" ,输入文本的框子
+密码输入框：input type="password" ,输入密码的框子
+-->
+<a>名字：<input type="text" name="username"></a>
+<a>密码：<input type="password" name="password"></a>
+<!--get方式提交：可以直接在url看到个人信息（网址直接看到信息）不安全，但是高效
+POST方式提交： 不在url显示（网址不能看到）相较之前安全，但是仍然可以抓到post，后台加密，这是日后内容！
+-->
+	<input type="submit">
+	<input type="reset">
+</p>
+
+
+<!--说明： 
+type:text(文本)、password（密码）、checkbox（多选框）、radio（单选框）、submit（提交按钮）、reset（重置按钮）、file（选择文件）、hidden（隐藏属性）、image（图片） 和button（普通按钮），默认为 text
+name:名称
+value：元素初始值，type 为radio时必须指定一个值
+size：当type为text或 password时，表单元素的大小以字符为单位。对于其他类型，宽度以像素为单位
+maxlength：当type的text或者password时候，输入的最大位数
+checked：type为radio或者checkbox时候，指定按钮是否选中
+-->
+
+<p>
+	性别：
+	<input type="radio" value="boy" name="sex">男
+	<input type="radio" value="gril" name="sex">女
+
+<!--radio是单选框的样子，但不具备单选的功能，所以设置name，为了单一性，所以name必须相同-->
+<!--radio的value是选择的数值，可以为数字也可以是字母，你可以理解为属于自己的变量，日后可以做判断数值使用来选择对应路线-->
+
+
+<!--多选框
+input type="checkbox"
+name   可以不一样，但是从后台获取可能就麻烦点
+value 是你说明的数据（也就是说你自己设置了一个常量X，里面写着你需要的数据，写后台的时候可以判断这个是否存在！或者理解为返回的东西存在于这个变量里）
+-->
+<p>爱好
+	<input type="checkbox" value=" sleep" name="aihao">睡觉
+	<input type="checkbox" value=" game" name="aihao">玩游戏
+	<input type="checkbox" value=" video" name="aihao">看视频
+	<input type="checkbox" value=" eat" name="aihao">吃饭
+</p>
+
+<!--注意！：
+按钮和选择框是不一样的，name变成了返回调用用的，value成为了按钮标题！！！！
+image是图片，src是图片地址
+ -->
+ <p>
+	<input type="button" name="123" value="我是一个按钮">
+	<input type="image" src="">
+</p>
+
+<!--
+下拉框:
+value 是你说明的数据（也就是说你自己设置了一个常量X，里面写着你需要的数据，写后台的时候可以判断这个是否存在！或者理解为返回的东西存在于这个变量里）在简单地说就是网站提交的数据值！！！！！
+selected是默认选项，比如我给4加个selected 那么你打开html的时候就4，它不仅可以在选择列表里使用，也可以在多选框和单选框里使用！
+-->
+<p>选择序列
+<select name="列表名称">
+	<option value="1">1</option>
+	<option value="2" selected>2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+</select>
+</p>
+
+个非常长的文本框
+<!--文本域
+cols是指框的宽度
+row是指框的高度
+-->
+<textarea name="textarea" cols="50" rows="10" id="feileishen2">文本内容</textarea>
+</p>
+
+
+<!--文件域
+file是指选择文件
+name返回的 数据 在name设置的flies提交
+button是按钮，value代表了按钮的标题！
+-->
+<p>
+<input type="file" name="files">
+<input type="button" value="上传" name="upload">
+</p>
+
+
+
+<!--简单验证-->
+<!--邮箱验证-->
+<p>
+	<input type="email" name="email">
+</p>
+
+<!--URL验证-->
+<p>
+	<input type="url" name="url">
+</p>
+<!--数字验证
+max指的是最大数值
+min是指最少数值
+step是给当前数+9
+-->
+<p>
+	<input type="number" name="num" max="100" min="1" step="9">
+</p>
+<!--滑块验证-->
+<p>
+	<input type="range" name="range" max="100" min="0" step="20">
+</p>
+
+
+
+<!--搜索框-->
+<p>
+	<input type="search" name="search">
+</p>
+
+
+<!--
+说实话到这里，我自己都对type和name有点懵，我做个总结吧
+type 指定元素类型 text ,password, checkbox,radio,submit,reset,file,hidden,image和button 默认为text
+name 指定表单元素的名称
+value 元素的初始值，type 为 radio时 必须指定一个值。按钮的作用是标题名称
+size 指定表单元素的初始宽度，当type 为 text 或password时，表单元素的大小以字符为单位，对于其他类型，宽度以像素为单位
+maxlength type为 text或 password时， 最大输入字符数
+checked type为 radio或者chechbox 时，指定按钮是否选中！	
+readonly 是只读标签，可以在任何后面加入，这样只能看不能改！
+disabled 禁用标签，不能改，不能选中！适用于任何功能
+-->
+
+
+<!--增强鼠标可用性-->
+<p>
+	<label for="feileishen2">你点我试试</label>
+<!--for指向什么，比如name，id,你可以理解为跳转到飞雷神印记-->
+</p>
+
+
+<!--表单简单验证
+placeholder 是指提示信息（只适用于输入框即），用作属性和readonly 和disabled 还有hidden
+required 是指表单不能为空，即输入框不能没有任何东西
+pattern 正则标签  https://stackoverflow.org.cn/regexsucha/正则表达表
+例：
+-->
+<input type=text name=admin placeholder="请输入你的用户名"><br/>
+<input type=text name=admin readonly><br/>
+<input type=text name=admin disabled><br/>
+<input type=text name=admin required ><br/>
+<input type="text" name=diy pattern="/((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)/
+/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/ 或 ((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)"> 这个框只能输入IP 地址
+
+</p>
+</body>
+</html>
